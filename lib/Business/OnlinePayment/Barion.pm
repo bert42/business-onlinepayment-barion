@@ -255,7 +255,8 @@ Business::OnlinePayment::Barion - Online payment processing via Barion
     $tx->test_transaction(1); # remove when migrating to production env
 
     # minimal payment request mode, all defaults, only payment amount, order number and email
-    $tx->content(amount => 1999, po_number => 12345, merchant_email => 'a@b.com');
+    $tx->content(action => 'normal authorization', amount => 1999,
+                 po_number => 12345, merchant_email => 'a@b.com');
     eval    { $tx->submit() };
     if ($@) { die 'failed to submit to remote because: '.$@ };
 

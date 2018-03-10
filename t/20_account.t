@@ -1,5 +1,9 @@
 use strict;
 use warnings;
+
+use strict;
+use warnings;
+
 use Test::Most;
 use Business::OnlinePayment;
 use Data::Dumper;
